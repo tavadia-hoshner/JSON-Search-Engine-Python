@@ -2,7 +2,8 @@
 >This is a search engine used to find a recipe name based on the keywords provided and to find complete recipes when the exact name is given.
 >There are 2 main modes of using the search engine
 
-![](header.png)
+![](header1.png)
+![](header2.png)
 
 ## Prerequisite
 
@@ -16,20 +17,27 @@ import string
 ## How To Use 
 >To run the search engine, run main.py
 >There are 2 modes to choose from 
->1. 
->2. 
->3. 
+>1. Recipe Finder Using Keywords
+>2. Recipe Lookup Using Name
 
 ## Release History
 
 * 1.0.0
     * Final Release
+* 0.3.1
+    * Bug Fixes
+* 0.3.0
+    * Improved UI to make unlimited searches and bug fixes
 * 0.2.1
-    * Fix: Incorrect Output when `score()` was called.
+    * Added "Recipe not found message" when there was no match.
 * 0.2.0
-    * Introduced the AI Component to play Player Vs. Computer and Computer Vs. Computer
+    * Added Recipe lookup mode to display the entire recipe.
+* 0.1.2
+    * Fix: Program Crash When Recipie Not Found.
+* 0.1.1
+    * Added a simple console based UI 
 * 0.1.0
-    * The first proper release (only included Player Vs. Player)
+    * The first proper release (only mode 1)
 * 0.0.1
     * Work in progress
 
