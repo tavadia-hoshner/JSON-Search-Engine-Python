@@ -5,7 +5,7 @@ from os import system
 from utilities import search, getRecipe
 
 def findNames():
-    print("\nFind Recipe Names By Keywords")
+    print("\n--- Find Recipe Names By Keywords ---\n")
     key = input("Enter Keyword Seperated By Space: ")
     stype = input("Enter Search Type(normal, simple or healthy): ")
     while(not(stype==("normal") or stype==("simple") or stype==("healthy"))):
@@ -24,7 +24,7 @@ def findNames():
 
 
 def findRecipe():
-    print("\nFind Recipe By Name")
+    print("\n--- Find Recipe By Name ---\n")
     key = input("Enter The Exact Name Of Your Dish: ")
     getRecipe(key)
     input("\nPress ENTER To Exit To Main Menu\n")
@@ -39,6 +39,9 @@ MODES:
 2.Recipe Lookup Using Name
 3.Exit Program""")
     inp = input("\nEnter The Number To Choose Your Mode: ")
+    while (not inp.isnumeric() or not(inp=='1'or inp=='2' or inp =='3')):
+        print("Invalid Option Try Again (Enter 1, 2 or 3)")
+        inp = input("Enter The Number To Choose Your Mode: ")
     inp = int(inp)
     if (inp==1):
         findNames()
@@ -46,11 +49,6 @@ MODES:
         findRecipe()
     elif (inp==3):
         exit()
-    else:
-        print("Invalid Input, Try Again\n")
-        input()
-        system('CLS')
-        main()
 
 if __name__ == "__main__":
     main()
